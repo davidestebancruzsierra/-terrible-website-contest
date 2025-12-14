@@ -1,1 +1,1 @@
-# -terrible-website-contest
+# terrible-website-contest
