@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match the Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 class="title-game">Match the Code</h1>
+  <div class="game" id="game">
+    <div class="header">
+      <div class="title">Enter Pin</div>
+      <div class="tries">Tries: <span id="tries">0</span></div>
+    </div>
+    <div class="display">
+      <div class="message" id="message">Enter Pin Code</div>
+      <div class="pin-display" id="pin-display"></div>
+    </div>
+    <div class="keypad">
+      <button class="key" data-key="1">1</button>
+      <button class="key" data-key="2">2</button>
+      <button class="key" data-key="3">3</button>
+      <button class="key" data-key="4">4</button>
+      <button class="key" data-key="5">5</button>
+      <button class="key" data-key="6">6</button>
+      <button class="key" data-key="7">7</button>
+      <button class="key" data-key="8">8</button>
+      <button class="key" data-key="9">9</button>
+      <button class="key control" data-key="clear">Clear</button>
+      <button class="key zero" data-key="0">0</button>
+      <button class="key control" data-key="delete">Delete</button>
+    </div>
+    <p class="hint">
+      The annoying sound starts when you press a number and
+      <strong>only stops when you enter the correct code.</strong>.
+    </p>
+  </div>
+  <audio src="horrible-sound.mp3" id="horrible-sound" loop preload="auto"></audio>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

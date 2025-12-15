@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(metallic-background3.jpg);
+  object-fit: contain;
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  color: #4a4a4a;
+  padding: 16px;
+  gap: 20px;
+}
+.title-game {
+  font-family: "Bangers", cursive;
+  font-size: 100px;
+  color: yellow;
+  letter-spacing: 2px;
+  transform: rotate(-5deg) skew(-10deg);
+  -webkit-text-stroke: 0.8px black;
+  text-shadow: 4px 4px 0px #000 8px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.game {
+  width: 400px;
+  max-width: 100%;
+  background-color: #636363;
+  color: #fff;
+  border-radius: 26px;
+  padding: 26px 22px 30px;
+  -webkit-box-shadow: 0px 3px 32px 8px rgba(0, 0, 0, 0.94);
+  box-shadow: 0px 3px 32px 8px rgba(0, 0, 0, 0.94);
+  border: 2px solid #5c5c5c;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.title {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.2px black;
+  color: #ce0000;
+  font-weight: 600;
+}
+.tries {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+}
+.tries span {
+  font-weight: 600;
+  color: #c7c7c7;
+}
+.display {
+  background: white;
+  border-radius: 20px;
+  padding: 16px 14px 14px;
+  margin-bottom: 18px;
+  -webkit-box-shadow: -7px 4px 26px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: -7px 4px 26px -1px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 1;
+}
+.message {
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #363636;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.message.success {
+  color: green;
+}
+.message.error {
+  color: #ce0000;
+}
+.pin-display {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 1.6rem;
+  letter-spacing: 0.32em;
+  text-align: center;
+  color: #363636;
+}
+.pin-display span {
+  display: inline-block;
+  min-width: 0.9em;
+}
+.keypad {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.key {
+  border: 1px solid #363636;
+  border-radius: 18px;
+  padding: 14px 0px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.07s ease, box-shadow 0.07s ease, filter 0.18s;
+  user-select: none;
+}
+.key:hover {
+  background-color: #cfcfcf;
+}
+.key:active {
+  transform: translateY(3px);
+  filter: brightness(0.95);
+  background-color: #bfbfbf;
+}
+.key.control {
+  background-color: #333333;
+  color: #e0e0e0;
+  letter-spacing: 0.04em;
+}
+.key.zero {
+  grid-column: 2/3;
+}
+.game.shake {
+  animation: shake 0.3s linear;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-6px);
+  }
+
+  40% {
+    transform: translateX(6px);
+  }
+
+  60% {
+    transform: translateX(-4px);
+  }
+
+  80% {
+    transform: translateX(4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+.hint {
+  margin-top: 16px;
+  font-size: 0.78rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  line-height: 1.4;
+}
+.hint strong {
+  color: #ce0000;
+  font-weight: 600;
+  -webkit-text-stroke: 0.1px black;
+}
+@media (max-width: 400px) {
+  .game {
+    padding: 22px 16px 24px;
+    border-radius: 22px;
+  }
+  .pin-display {
+    font-size: 1.4rem;
+    letter-spacing: 0.26em;
+  }
+  .key {
+    padding: 12px 0px;
+  }
+  .title-game {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 668px) {
+  .title-game {
+    font-size: 3rem;
+  }
+}
